@@ -1,52 +1,53 @@
-.obal {
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
     background-image: linear-gradient(#615dad, #ffc8da);
-    padding-top: 100px;
+    padding: 0px 0px 130px 0px;
+    align-items: center;
+    text-align: center;
     
+}
+
+.content {
+    background-color: #283e50;
+    width: 365px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px 7px 0px 0px;
+    margin-block-start: 55px;
 }
 
 img {
-    width: 60vw;
-}
-
-.main {
-    background-color: #283e50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60vw;
-    
-}
-
-.description {
-    
-    color: white;
-    text-align: center;
+    width: 365px;
+    border-radius: 7px 7px 0px 0px;
 }
 
 h1 {
     font-family: 'Lobster', cursive;
+    font-size: 47px;
 }
+
 p {
-    padding: 15px;
+    padding: 0px 13px 10px 13px;
     font-weight:lighter;
+    font-size: 18px;
+    margin: 0px 0px 28px 0;
 }
 
 a {
     text-decoration: none;
-    width: 60vw;
     text-align: center;
     color: white;
+    font-size: 18px;
+    padding: 13px 0px 13px 0px;
 }
 
 a.rules {
     background-color: #1fcca4;
     margin-bottom: 1px;
-    padding: 8px 0px 8px 0px;
 }
 
 a.rules:hover {
@@ -55,7 +56,6 @@ a.rules:hover {
 
 a.play {
     background-color: #0197f6;
-    padding: 8px 0px 8px 0px;
 }
 
 a.play:hover {
