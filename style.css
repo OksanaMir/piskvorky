@@ -18,7 +18,6 @@ body {
     background-color: #283e50;
     width: 365px;
     color: white;
-    text-align: center;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
