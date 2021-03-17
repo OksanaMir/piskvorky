@@ -28,8 +28,9 @@ body {
 }
 
 img {
-    width: 365px;
+    width: inherit;
     border-radius: inherit;
+    flex-shrink: 0;
 }
 
 h1 {
