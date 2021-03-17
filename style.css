@@ -5,9 +5,10 @@ html { box-sizing: border-box; }
 
 body {
     display: flex;
+    max-width: 100vw;
     flex-direction: column;
     background-image: linear-gradient(#615dad, #ffc8da);
-    padding: 0px 1px 130px 1px;
+    padding: 1px;
     align-items: center;
     text-align: center;
     font-family: "Arial", sans-serif;
@@ -23,11 +24,12 @@ body {
     flex-direction: column;
     border-radius: 6px 6px 0px 0px;
     margin-block-start: 55px;
+    margin-block-end: 130px;
 }
 
 img {
     width: 365px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: inherit;
 }
 
 h1 {
