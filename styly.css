@@ -27,11 +27,31 @@ body {
     margin-block-start: 55px;
     margin-block-end: 130px;
 }
+.description {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    
+}
 
-img {
+img.main {
     width: inherit;
     border-radius: inherit;
     flex-shrink: 0;
+}
+
+
+figure {
+    width: inherit;
+    align-self: center;
+    display: inline-block;
+}
+
+img.rules {
+    width: auto;
+    flex-shrink: 0;
+    width: inherit;
+    padding: 0 20px 5px 20px;
 }
 
 h1 {
@@ -39,7 +59,11 @@ h1 {
     font-size: 47px;
 }
 
-p {
+li {
+    text-align: initial;
+}
+
+p, figcaption {
     padding: 0px 13px 5px 13px;
     font-weight: 500;
     font-size: 16px;
@@ -54,12 +78,12 @@ a {
     padding: 15px 0px 15px 0px;
 }
 
-a.rules {
+a.rules, .main-page {
     background-color: #1fcca4;
     margin-bottom: 1px;
 }
 
-a.rules:hover {
+a.rules, .main-page:hover {
     background-color: #1cbb96;
 }
 
