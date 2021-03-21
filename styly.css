@@ -48,7 +48,6 @@ figure {
 #cross, #circle {
     width: 0.75em;
     filter:invert(100%);
-
 }
 
 img.rules {
@@ -62,8 +61,6 @@ h1 {
     font-family: 'Lobster', cursive;
     font-size: 47px;
 }
-
-
 
 li {
     text-align: initial;
