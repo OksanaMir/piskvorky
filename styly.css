@@ -47,11 +47,6 @@ p {
   line-height: 150%;
 }
 
-.description {
-  width: 100%;
-  display: block;
-}
-
 li {
   text-align: initial;
   margin: 0 40px 15px 40px;
