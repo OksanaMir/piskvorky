@@ -46,6 +46,9 @@ p {
   margin: 0px 0px 24px 0;
   line-height: 150%;
 }
+.description {
+  display: block;
+}
 
 li {
   text-align: initial;
@@ -146,8 +149,7 @@ a.play:hover {
     line-height: 150%;
   }
   .content {
-    margin-block-start: 10px;
+    margin-block-start: 20px;
     max-width: 50%;
-    padding-top: 15px;
   }
 }
