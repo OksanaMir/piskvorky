@@ -114,6 +114,7 @@ a.play:hover {
     margin-block-end: 10px;
     margin-left: 40px;
     margin-right: 40px;
+    padding-top: 0;
   }
 
   li {
