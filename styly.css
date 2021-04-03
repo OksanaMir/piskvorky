@@ -29,7 +29,8 @@ body {
   border-radius: 6px 6px 0px 0px;
   margin-block-start: 55px;
   margin-block-end: 130px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img.main {
@@ -59,7 +60,7 @@ li {
 
 #cross,
 #circle {
-  width: 0.75em;
+  width: 0.8em;
   filter: invert(100%);
 }
 
@@ -111,21 +112,25 @@ a.play:hover {
 }
 a#logo {
   padding: 6px;
+  margin-left: 10px;
+  border-radius: 4px;
 }
 
 #icon {
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
 }
 .game {
   flex-grow: 1;
   text-align: left;
   padding: 1px 0 1px 0;
   margin: 0;
+  font-size: 2rem;
 }
 section {
   display: flex;
   padding: 10px 0 10px 0;
+  margin-bottom: 10px;
 }
 .btn-group {
   min-height: 80vmin;
@@ -134,7 +139,7 @@ section {
   flex-wrap: wrap;
   background-color: rgb(226, 207, 211);
   opacity: 0.5;
-  border: 1.5px solid black;
+  border: 1px solid black;
 }
 button {
   width: 10%;
@@ -142,9 +147,15 @@ button {
   padding: 0;
   border-radius: 0mm;
   float: left;
-  border: 1.5px solid black;
+  border: 2px solid black;
   max-height: initial;
   background-color: transparent;
+}
+button:hover {
+  background-color: rgb(238, 225, 227);
+}
+button:focus {
+  background: rgb(219, 188, 194);
 }
 
 @media (min-width: 640px) {
@@ -154,6 +165,10 @@ button {
     margin-left: 40px;
     margin-right: 40px;
     padding-top: 0;
+  }
+  #game {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   li {
@@ -191,5 +206,9 @@ button {
   .content {
     margin-block-start: 20px;
     max-width: 50%;
+  }
+
+  .btn-group {
+    min-width: 80vmin;
   }
 }
