@@ -117,15 +117,15 @@ a#logo {
 }
 
 #icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1rem;
+  width: 1rem;
 }
 .game {
   flex-grow: 1;
   text-align: left;
   padding: 1px 0 1px 0;
   margin: 0;
-  font-size: 2rem;
+  font-size: 18px;
 }
 section {
   display: flex;
@@ -154,7 +154,7 @@ button {
 button:hover {
   background-color: rgb(238, 225, 227);
 }
-button:focus {
+button:focus-within {
   background: rgb(219, 188, 194);
 }
 
@@ -205,7 +205,7 @@ button:focus {
   }
   .content {
     margin-block-start: 20px;
-    max-width: 100%;
+    max-width: 50%;
   }
 
   .btn-group {
