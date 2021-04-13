@@ -3,25 +3,30 @@ let activePlayer = 'circle';
 const btns = document.querySelectorAll('button');
 
 btns.forEach((btn) =>
-  btn.addEventListener('click', () => {
-    if (activePlayer == 'circle') {
-      btn.style.class = 'board__field--circle';
-      btn.innerHTML =
-        '<img id="circle"  src="images/circle.svg" alt="circle" />';
-      document.querySelector('.game').innerHTML =
-        'HRAJE: <img id="cross" src="images/cross.svg" alt="cross" />';
-
-      btn.disabled = true;
-      activePlayer = 'cross';
+  btn.addEventListener('click', (e) => {
+    if (btn.disabled) {
+      return;
+      console.log('cant play');
     } else {
-      btn.style.class = 'board__field--cross';
-      btn.innerHTML = '<img  id="cross"  src="images/cross.svg" alt="cross"/>';
-      activePlayer = 'circle';
-      document.querySelector('.game').innerHTML =
-        'HRAJE: <img id="circle" src="images/circle.svg" alt="circle" />';
+      if (activePlayer == 'circle') {
+        e.target.className = 'board__field--circle';
+        //btn.style.backgroundImage = 'images/circle.svg';
+        document.querySelector('.game').innerHTML =
+          'HRAJE: <img id="cross" src="images/cross.svg" alt="cross" />';
 
+        //btn.disabled = true;
+        activePlayer = 'cross';
+      } else {
+        e.target.className = 'board__field--cross';
+        //btn.style.backgroundImage = 'images/cross.svg';
+        activePlayer = 'circle';
+        document.querySelector('.game').innerHTML =
+          'HRAJE: <img id="circle" src="images/circle.svg" alt="circle" />';
+
+        //btn.disabled = true;
+        activePlayer = 'circle';
+      }
       btn.disabled = true;
-      activePlayer = 'circle';
     }
   }),
 );

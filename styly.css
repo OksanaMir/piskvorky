@@ -156,24 +156,34 @@ button {
   height: 8vmin;
   background-color: transparent;
   cursor: pointer;
+  background-size: 0;
+  transition: ease-in 0.15s background-size;
+}
+.board__field--circle {
+  color: black;
+  background-image: url('images/circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
+
+.board__field--cross {
+  color: black;
+  background-image: url('images/cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
+
+.board__field--circle {
+  background-image: 100%;
 }
 button:hover,
 button:focus-within {
   background-color: rgb(238, 225, 227);
   outline: black auto 2px;
 }
-button #cross,
-button #circle {
-  width: 25%;
-  transition-property: width;
-  transition-duration: 0.6s;
-}
-button #cross:active,
-button #circle:active {
-  width: 75%;
-}
 
-width: 75%;
 @media (min-width: 640px) {
   .content {
     margin-block-start: 25px;
