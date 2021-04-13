@@ -60,8 +60,10 @@ li {
   margin: 0 40px 15px 40px;
 }
 
-#cross,
-#circle {
+.description #cross,
+.description #circle,
+.game #cross,
+.game #circle {
   width: 0.8em;
   filter: invert(100%);
 }
@@ -151,17 +153,27 @@ button {
   padding: 0;
   border-radius: 0mm;
   border: 2px solid black;
-  max-height: initial;
+  height: 8vmin;
   background-color: transparent;
   cursor: pointer;
 }
-button:hover {
-  background-color: rgb(238, 225, 227);
-}
+button:hover,
 button:focus-within {
-  background: rgb(219, 188, 194);
+  background-color: rgb(238, 225, 227);
+  outline: black auto 2px;
+}
+button #cross,
+button #circle {
+  width: 25%;
+  transition-property: width;
+  transition-duration: 0.6s;
+}
+button #cross:active,
+button #circle:active {
+  width: 75%;
 }
 
+width: 75%;
 @media (min-width: 640px) {
   .content {
     margin-block-start: 25px;
