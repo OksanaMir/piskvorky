@@ -115,9 +115,11 @@ a.play:hover {
   background-color: #0090e9;
 }
 a#logo {
-  padding: 6px;
-  margin-left: 10px;
+  padding-top: 9px;
+  margin: 0 5px 0 5px;
   border-radius: 4px;
+  width: 35px;
+  height: 35px;
 }
 
 #icon {
