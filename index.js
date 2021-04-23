@@ -39,7 +39,7 @@ const isWinningMove = (field) => {
   let x;
   let y;
 
-  let inRow = 1; // Jednička pro právě vybrané políčko
+  let inRow = 1;
   // Koukni doleva
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
@@ -83,52 +83,58 @@ const isWinningMove = (field) => {
     return true;
   }
 
-  let inDiag = 1;
+  let diagTop = 1;
 
   x = origin.row;
   y = origin.column;
 
   // Koukni nahoru doleva
   while (x > 0 && y > 0 && symbol === getSymbol(getField(x - 1, y - 1))) {
-    inDiag++;
+    diagTop++;
     x--;
     y--;
   }
-  /*
-  //Koukni dolu doprava
-  while (
-    x < boardSize - 1 &&
-    y < boardSize - 1 &&
-    symbol === getSymbol(getField(x + 1, y + 1))
-  ) {
-    inDiag++;
-    x++;
-    y++;
-  }
-  */
+
   // Koukni nahoru doprava
   while (
     x > 0 &&
     y < boardSize - 1 &&
     symbol === getSymbol(getField(x - 1, y + 1))
   ) {
-    inDiag++;
+    diagTop++;
     x--;
     y++;
   }
-  /*
+
+  if (diagTop >= symbolsToWin) {
+    return true;
+  }
+
+  let diagBottom = 1;
+
+  //Koukni dolu doprava
+  while (
+    x < boardSize - 1 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(x + 1, y + 1))
+  ) {
+    diagBottom++;
+    x++;
+    y++;
+  }
+
   //Koukni dolu doleva
   while (
     x < boardSize - 1 &&
     y > 0 &&
     symbol === getSymbol(getField(x + 1, y - 1))
   ) {
-    inDiag++;
+    diagBottom++;
     x++;
     y--;
   }
-*/
-  if (inDiag >= symbolsToWin) {
+
+  if (diagBottom >= symbolsToWin) {
     return true;
   }
 
@@ -171,7 +177,7 @@ btns.forEach((btn) =>
 
       setTimeout(function () {
         location.reload();
-      }, 8000);
+      }, 2000);
       //location.reload();
     }
 
