@@ -27,7 +27,7 @@ const getSymbol = (field) => {
   } else if (field.classList.contains('board__field--circle')) {
     return 'circle';
   }
-  //return undefined;
+  return undefined;
 };
 
 const symbolsToWin = 5;
@@ -173,11 +173,11 @@ btns.forEach((btn) =>
     // isWinningMove(btn);
     if (isWinningMove(btn) === true) {
       //return alert(`Vyhrál ${prevPlayer}`);
-      confirm(`Vyhrál ${prevPlayer}. Spoustit novou hru?`);
+      confirm(`Vyhrál ${prevPlayer}. Spustit novou hru?`);
 
       setTimeout(function () {
         location.reload();
-      }, 2000);
+      }, 1000);
       //location.reload();
     }
 
