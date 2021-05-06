@@ -141,10 +141,16 @@ const isWinningMove = (field) => {
   return false;
 };
 
+let gameOver = false;
+
 btns.forEach((btn) =>
   btn.addEventListener('click', (e) => {
+    if (gameOver) {
+      return;
+    }
+
     if (btn.disabled) {
-      alert('Cannot play');
+      return;
     }
 
     let prevPlayer = activePlayer;
@@ -173,11 +179,15 @@ btns.forEach((btn) =>
     // isWinningMove(btn);
     if (isWinningMove(btn) === true) {
       //return alert(`Vyhrál ${prevPlayer}`);
-      confirm(`Vyhrál ${prevPlayer}. Spustit novou hru?`);
+      gameOver = true;
 
       setTimeout(function () {
-        location.reload();
-      }, 1000);
+        confirm(`Vyhrál ${prevPlayer}. Spustit novou hru?`);
+        setTimeout(function () {
+          location.reload();
+        }, 1000);
+      }, 200);
+
       //location.reload();
     }
 
